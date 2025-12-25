@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Product Details - Porsche 911 GT3</title>
+</head>
+
+<body class="product_page">
+  <header class="header">
+    <div class="container">
+      <div class="header_content">
+        <div class="logo">
+          <a href="index.html#home">
+            <img src="assets/logo.svg" alt="Auto Company Logo">
+          </a>
+        </div>
+
+        <div class="nav_wrapper" id="navWrapper">
+          <nav class="nav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#models">Models</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+          <a class="btn btn_login" href="#">Login</a>
+        </div>
+        <div class="burger_menu" id="burgerMenu">
+          <img src="assets/burger menu.svg" alt="Menu">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="product_hero">
+      <div class="container">
+        <div class="product_hero_top">
+          <div class="product_hero_badge">
+            <span class="product_hero_badge_dot"></span>
+            <span>Performance Model</span>
+          </div>
+          <h1 class="product_hero_title">PORSCHE 911 GT3</h1>
+        </div>
+
+
+        <div class="product_hero_car">
+          <div class="podium"></div>
+          <model-viewer id="car_model" src="assets/porsche_911_gt3.glb" ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral" poster="assets/poster (49).webp" shadow-intensity="1"
+            interaction-prompt="none" camera-orbit="90deg 75deg 1.5m" field-of-view="30deg" exposure="1.5"
+            environment-intensity="1.5">
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+          </model-viewer>
+        </div>
+
+        <div class="product_options">
+          <div class="product_option_card">
+            <div class="product_option_head">
+              <div class="product_option_label">Wheels</div>
+            </div>
+            <div class="product_option_body product_option_body_wheels">
+              <button class="product_chip product_chip_active" type="button"
+                data-wheel-texture="assets/wheeltexture2.png">
+                <img class="product_chip_img" src="assets/wheel1.png" alt="Black Wheel">
+              </button>
+
+              <button class="product_chip" type="button" data-wheel-texture="assets/wheeltexture1.png">
+                <img class="product_chip_img" src="assets/wheel2.png" alt="Gold Wheel">
+              </button>
+
+              <button class="product_chip" type="button" data-wheel-texture="assets/wheeltexture3.png">
+                <img class="product_chip_img" src="assets/wheel3.png" alt="Silver Wheel">
+              </button>
+            </div>
+          </div>
+
+          <div class="product_option_card">
+            <div class="product_option_head">
+              <div class="product_option_label">Colors</div>
+            </div>
+            <div class="product_option_body product_option_body_colors">
+              <button class="color_dot color_dot_active" type="button" data-color="white"></button>
+              <button class="color_dot" type="button" data-color="black"></button>
+              <button class="color_dot" type="button" data-color="red"></button>
+              <button class="color_dot" type="button" data-color="blue"></button>
+            </div>
+          </div>
+
+          <div class="product_option_card">
+            <div class="product_option_head">
+              <div class="product_option_label">Interior</div>
+            </div>
+            <div class="product_option_body product_option_body_interior">
+              <button class="product_chip product_chip_active" type="button" data-interior="black">
+                <img class="product_chip_img" src="assets/interior1.png" alt="Black Leather">
+              </button>
+
+              <button class="product_chip" type="button" data-interior="white">
+                <img class="product_chip_img" src="assets/interior3.png" alt="White Leather">
+              </button>
+
+              <button class="product_chip" type="button" data-interior="beige">
+                <img class="product_chip_img" src="assets/interior2.png" alt="Beige Leather">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="product_design">
+      <div class="container">
+        <div class="product_section_head">
+          <span class="subtitle">Driven by Design</span>
+          <h2 class="product_section_title">Designed for Every Moment on the Road</h2>
+        </div>
+
+        <div class="product_design_stage">
+          <div class="product_design_car_wrap">
+            <model-viewer id="design_model" src="assets/porsche_911_gt3.glb" ar ar-modes="webxr scene-viewer quick-look"
+              camera-controls tone-mapping="neutral" poster="assets/poster (49).webp" shadow-intensity="1"
+              camera-orbit="179.6deg 0.0000573deg 0.09503m" field-of-view="30deg">
+              <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
+            </model-viewer>
+          </div>
+
+          <div class="product_callouts">
+            <div class="product_callout product_callout_left product_callout_1">
+              <div class="product_callout_dot"></div>
+              <div class="product_callout_box"><img src="assets/Iconn.png" alt=""></div>
+              <div class="product_callout_line"></div>
+            </div>
+            <div class="product_callout product_callout_left product_callout_2">
+              <div class="product_callout_dot"></div>
+              <div class="product_callout_box"><img src="assets/iconnn.png" alt=""></div>
+              <div class="product_callout_line"></div>
+            </div>
+            <div class="product_callout product_callout_left product_callout_3">
+              <div class="product_callout_dot"></div>
+              <div class="product_callout_box"><img src="assets/iconnnn.png" alt=""></div>
+              <div class="product_callout_line"></div>
+            </div>
+
+            <div class="product_callout product_callout_right product_callout_4">
+              <div class="product_callout_line"></div>
+              <div class="product_callout_box"><img src="assets/Iconn.png" alt=""></div>
+              <div class="product_callout_dot"></div>
+            </div>
+            <div class="product_callout product_callout_right product_callout_5">
+              <div class="product_callout_line"></div>
+              <div class="product_callout_box"><img src="assets/iconnn.png" alt=""></div>
+              <div class="product_callout_dot"></div>
+            </div>
+            <div class="product_callout product_callout_right product_callout_6">
+              <div class="product_callout_line"></div>
+              <div class="product_callout_box"><img src="assets/iconnnn.png" alt=""></div>
+              <div class="product_callout_dot"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product_callouts_mobile">
+          <div class="product_callouts_mobile_item"><img src="assets/Iconn.png" alt=""></div>
+          <div class="product_callouts_mobile_item"><img src="assets/iconnn.png" alt=""></div>
+          <div class="product_callouts_mobile_item"><img src="assets/iconnnn.png" alt=""></div>
+          <div class="product_callouts_mobile_item"><img src="assets/Iconn.png" alt=""></div>
+          <div class="product_callouts_mobile_item"><img src="assets/iconnn.png" alt=""></div>
+          <div class="product_callouts_mobile_item"><img src="assets/iconnnn.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="product_feature">
+      <div class="container">
+        <div class="product_feature_grid">
+          <img class="product_feature_img" src="assets/wheel.png" alt="Wheel close-up">
+          <div class="product_feature_text">
+            <span class="subtitle">Premium Engineered Wheels</span>
+            <h2 class="product_feature_title">ENGINEERED FOR<br>PRECISION, BUILT<br>FOR PERFORMANCE</h2>
+            <p class="product_feature_desc">
+              Every detail is designed to maximize grip, cooling, and stability. Lightweight construction and
+              optimized geometry give you confident control in every corner.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="product_pricing">
+      <div class="container">
+        <div class="product_section_head product_section_head_center">
+          <span class="subtitle">Sustainable Future</span>
+          <h2 class="product_section_title">Driving Towards a Sustainable Future</h2>
+        </div>
+
+        <div class="product_pricing_grid">
+
+          <div class="price_card">
+            <div class="price_content_top">
+              <h3 class="price_title">Standard Ownership</h3>
+              <div class="price_value">$29,900</div>
+              <p class="price_subtitle">Start Your Journey</p>
+            </div>
+
+            <ul class="price_list">
+              <li><span class="price_bullet"></span>New or certified pre-owned vehicle</li>
+              <li><span class="price_bullet"></span>Standard manufacturer warranty</li>
+              <li><span class="price_bullet"></span>Basic maintenance package</li>
+              <li><span class="price_bullet"></span>Access to all service centers</li>
+              <li><span class="price_bullet"></span>Customer support during working hours</li>
+            </ul>
+            <button class="btn btn_secondary" href="product.html">Explore Our Cars<span class="arrow2"></span></button>
+          </div>
+
+
+          <div class="price_card price_card_featured">
+            <div class="price_content_top">
+              <h3 class="price_title">Standard Ownership</h3>
+              <div class="price_value">$29,900</div>
+              <p class="price_subtitle">Start Your Journey</p>
+            </div>
+
+            <ul class="price_list">
+              <li><span class="price_bullet"></span>New or certified pre-owned vehicle</li>
+              <li><span class="price_bullet"></span>Standard manufacturer warranty</li>
+              <li><span class="price_bullet"></span>Basic maintenance package</li>
+              <li><span class="price_bullet"></span>Access to all service centers</li>
+              <li><span class="price_bullet"></span>Customer support during working hours</li>
+            </ul>
+            <button class="btn btn_secondary" href="product.html">Explore Our Cars<span class="arrow2"></span></button>
+          </div>
+
+
+          <div class="price_card">
+            <div class="price_content_top">
+              <h3 class="price_title">Standard Ownership</h3>
+              <div class="price_value">$29,900</div>
+              <p class="price_subtitle">Start Your Journey</p>
+            </div>
+
+            <ul class="price_list">
+              <li><span class="price_bullet"></span>New or certified pre-owned vehicle</li>
+              <li><span class="price_bullet"></span>Standard manufacturer warranty</li>
+              <li><span class="price_bullet"></span>Basic maintenance package</li>
+              <li><span class="price_bullet"></span>Access to all service centers</li>
+              <li><span class="price_bullet"></span>Customer support during working hours</li>
+            </ul>
+            <button class="btn btn_secondary" href="product.html">Explore Our Cars<span class="arrow2"></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="product_video">
+      <div class="container">
+        <div class="product_section_head product_section_head_center">
+          <span class="subtitle">Experience</span>
+          <h2 class="product_section_title">Watch how the car performs,<br>handles, and feels on the road.</h2>
+        </div>
+
+        <div class="product_video_frame">
+          <video class="product_video_el" src="assets/video.mp4" autoplay muted loop playsinline></video>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="product_booking">
+      <div class="container">
+        <div class="product_booking_grid">
+          <div class="product_booking_text">
+            <span class="subtitle">Reserve Your Test Drive</span>
+            <h2 class="product_booking_title">Book Your Test<br>Drive Today</h2>
+            <p class="product_booking_desc">
+              Experience the performance and comfort in person. Choose a preferred date and we’ll confirm
+              the schedule instantly.
+            </p>
+
+            <div class="product_booking_points">
+              <div class="product_booking_point">
+                <span class="product_booking_icon"><img src="assets/stat_icon1.svg" alt=""></span>
+                <div>
+                  <div class="product_booking_point_title">Flexible Scheduling</div>
+                  <div class="product_booking_point_desc">Pick a date and time that suits you.</div>
+                </div>
+              </div>
+
+              <div class="product_booking_point">
+                <span class="product_booking_icon"><img src="assets/stat_icon2.svg" alt=""></span>
+                <div>
+                  <div class="product_booking_point_title">Expert Guidance</div>
+                  <div class="product_booking_point_desc">Get help choosing the right configuration.</div>
+                </div>
+              </div>
+
+              <div class="product_booking_point">
+                <span class="product_booking_icon"><img src="assets/stat_icon3.svg" alt=""></span>
+                <div>
+                  <div class="product_booking_point_title">At Models Available</div>
+                  <div class="product_booking_point_desc">Access our latest lineup anytime.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product_booking_form_wrap">
+            <form class="product_booking_form">
+              <div class="product_form_row">
+                <label class="product_form_label" for="full_name">Full name</label>
+                <input class="product_form_input" id="full_name" name="full_name" type="text" placeholder="Your name">
+              </div>
+
+              <div class="product_form_row">
+                <label class="product_form_label" for="email">Email</label>
+                <input class="product_form_input" id="email" name="email" type="email" placeholder="you@example.com">
+              </div>
+
+              <div class="product_form_row">
+                <label class="product_form_label" for="model">Model</label>
+                <select class="product_form_input" id="model" name="model">
+                  <option>Porsche 911 GT3</option>
+                  <option>Executive Sedan Pro</option>
+                  <option>Electric Performance</option>
+                </select>
+              </div>
+
+              <div class="product_form_row product_form_row_2col">
+                <div>
+                  <label class="product_form_label" for="date">Preferred date</label>
+                  <input class="product_form_input" id="date" name="date" type="date">
+                </div>
+                <div>
+                  <label class="product_form_label" for="time">Preferred time</label>
+                  <input class="product_form_input" id="time" name="time" type="time">
+                </div>
+              </div>
+
+              <button class="btn btn_secondary product_form_btn" type="button">Book Now <span
+                  class="arrow2"></span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_content">
+        <div class="footer_column footer_company">
+          <div class="footer_logo">
+            <img src="assets/logo.svg" alt="Auto Company Logo">
+          </div>
+          <p class="footer_description">Redefining the automotive experience through innovation, transparency, and
+            customer excellence. Your journey to the perfect vehicle starts here.</p>
+          <div class="footer_contact">
+            <div class="contact_item">
+              <span class="contact_icon"><img src="assets/phone.svg" alt=""></span>
+              <span>+20 123 456 7890</span>
+            </div>
+            <div class="contact_item">
+              <span class="contact_icon"><img src="assets/email.svg" alt=""></span>
+              <span>info@autocompany.eg</span>
+            </div>
+            <div class="contact_item">
+              <span class="contact_icon"><img src="assets/location.svg" alt=""></span>
+              <span>123 Tahrir Street, Downtown Cairo, Egypt</span>
+            </div>
+          </div>
+          <p class="copyright">© 2023 Auto Company. All rights reserved.</p>
+        </div>
+
+        <div class="footer_column">
+          <h4 class="footer_heading">Company</h4>
+          <ul class="footer_links">
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#careers">Careers</a></li>
+            <li><a href="index.html#press">Press</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_column">
+          <h4 class="footer_heading">Services</h4>
+          <ul class="footer_links">
+            <li><a href="index.html#browse">Browse Models</a></li>
+            <li><a href="index.html#3d">3D View</a></li>
+            <li><a href="index.html#compare">Compare Cars</a></li>
+            <li><a href="index.html#financing">Financing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_column">
+          <h4 class="footer_heading">Support</h4>
+          <ul class="footer_links">
+            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#service">Service Centers</a></li>
+            <li><a href="index.html#warranty">Warranty</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_column">
+          <h4 class="footer_heading">Follow Us</h4>
+          <div class="social_icons">
+            <a href="#" class="social_icon">f</a>
+            <a href="#" class="social_icon">t</a>
+            <a href="#" class="social_icon">in</a>
+            <a href="#" class="social_icon">li</a>
+          </div>
+          <div class="legal_links">
+            <a href="index.html#privacy">Privacy Policy</a>
+            <a href="index.html#terms">Terms of Service</a>
+            <a href="index.html#cookies">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="code.js"></script>
+</body>
+
+</html>

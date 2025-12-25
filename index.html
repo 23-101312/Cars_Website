@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Auto Company - The Future of Driving</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                    <img src="assets/logo.svg" alt="Auto Company Logo">
+                </div>
+                <div class="nav_wrapper" id="navWrapper">
+                    <nav class="nav">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#models">Models</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                    <button class="btn btn_login">Login</button>
+                </div>
+                <div class="burger_menu" id="burgerMenu">
+                    <img src="assets/burger menu.svg" alt="Menu">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero_content">
+                <div class="hero_text">
+                    <h1 class="hero_headline">
+                        THE FUTURE OF <span class="script">cars</span><br>
+                        DRIVING <span class="script">experience</span>
+                    </h1>
+                    <p class="hero_description">Discover a new generation of performance, comfort, and intelligent
+                        design.</p>
+                    <button class="btn btn_primary">Book Your Test Drive <span class="arrow"></span></button>
+                </div>
+                <div class="hero_car">
+                    <model-viewer src="assets/koenigsegg_jesko_spear__www.vecarz.com-compressed (1).glb" ar
+                        ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                        poster="assets/poster (49).webp" shadow-intensity="1" camera-orbit="-42.63deg 77.37deg 28.68m"
+                        field-of-view="30deg" disable-zoom>
+                        <div class="progress-bar hide" slot="progress-bar">
+                            <div class="update-bar"></div>
+                        </div>
+                    </model-viewer>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="driven_by_design">
+        <div class="section_curve">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0,100 L0,55 Q50,0 100,55 L100,100 Z" />
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="section_header">
+                <div class="section_text">
+                    <span class="subtitle">Driven by Design</span>
+                    <h2 class="section_title">Designed for Every Moment on the Road</h2>
+                </div>
+                <div class="section_description">
+                    <p>We offer a carefully selected range of modern vehicles that combine performance, comfort, and
+                        smart design.</p>
+
+                    <div class="section_description_bottom">
+                        <p class="small_text">Experience clarity, control, and confidence in every drive.</p>
+                        <button class="btn btn_primary">Explore Our Cars <span class="arrow"></span></button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="design_images">
+                <div class="design_image">
+                    <img src="assets/image1.png" alt="Car wheel design">
+                </div>
+                <div class="design_image">
+                    <img src="assets/image2.png" alt="Car headlight">
+                </div>
+                <div class="design_image">
+                    <img src="assets/image3.png" alt="Car interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="innovation">
+        <div class="container">
+            <div class="innovation_content">
+                <div class="innovation_text">
+                    <span class="subtitle">Innovation</span>
+                    <h2 class="section_title">Experience Cars in 3D & AR</h2>
+                    <p>Explore every detail of your next car through immersive 3D views and augmented reality. Rotate,
+                        zoom, and place the car in your real environment before you decide.</p>
+                    <div class="innovation_buttons">
+                        <button class="btn btn_secondary">View in 3D <span class="icon_3d"><img src="assets/Icon_3D.svg"
+                                    alt=""></span></button>
+                        <button class="btn btn_dark">Try in AR <span class="icon_ar"><img src="assets/Icon_ar.svg"
+                                    alt=""></span></button>
+                    </div>
+                </div>
+                <div class="innovation_display">
+                    <div class="car_3d_placeholder">
+                        <span class="rotation_label">360° Rotation</span>
+                        <model-viewer src="assets/porsche_911_gt3.glb" ar ar-modes="webxr scene-viewer quick-look"
+                            camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"
+                            camera-orbit="89.6deg 90.4deg 0.09503m" field-of-view="35deg" disable-zoom>
+                            <div class="progress-bar hide" slot="progress-bar">
+                                <div class="update-bar"></div>
+                            </div>
+                        </model-viewer>
+
+                        <span class="zoom_label">Zoom & Explore</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="models" class="our_models">
+        <div class="container">
+            <div class="models_header">
+                <span class="subtitle">Make Informed Decisions</span>
+                <p>Find the car that fits your lifestyle and needs.</p>
+                <h2 class="section_title">Our Models</h2>
+            </div>
+            <div class="filter_buttons">
+                <button class="filter_btn active" data-category="all">All</button>
+                <button class="filter_btn" data-category="classic">Classic</button>
+                <button class="filter_btn" data-category="sport">Sport</button>
+            </div>
+            <div class="models_grid">
+                <div class="model_card">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer src="assets/porsche_911_gt3.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="89.6deg 90.4deg 0.09503m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                            </model-viewer></div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">Porsche 911 GT3</h3>
+                        <p class="model_price">starting at EGP 850,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=porsche_911_gt3">View Details <span
+                                class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer src="assets/2019_mclaren_senna.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="90.4deg 79.74deg 9.767m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                            </model-viewer></div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">McLaren Senna</h3>
+                        <p class="model_price">starting at EGP 850,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=2019_mclaren_senna">View Details <span
+                                class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer src="assets/2024_byd_seal_06_gt.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="91.97deg 76.58deg 0.09589m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                            </model-viewer>
+                        </div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">BYD Seal 06 GT</h3>
+                        <p class="model_price">starting at EGP 850,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=2024_byd_seal_06_gt">View Details <span
+                                class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card" data-category="classic">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer
+                                src="assets/2015_bugatti_atlantic_-_concept_car.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="91.18deg 87.24deg 0.09888m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+
+                            </model-viewer>
+
+                        </div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">Bugatti Atlantic Concept</h3>
+                        <p class="model_price">starting at EGP 6,500,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=2015_bugatti_atlantic_concept">View
+                            Details <span class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card" data-category="sport">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer src="assets/2019_mclaren_600lt.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="95.53deg 86.45deg 9.461m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                            </model-viewer>
+                        </div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">McLaren 600LT</h3>
+                        <p class="model_price">starting at EGP 650,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=2019_mclaren_600lt">View Details <span
+                                class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card" data-category="classic">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer src="assets/2022_mercedes-benz_amg_sl63.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="93.55deg 78.55deg 24.71m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                            </model-viewer>
+                        </div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">Mercedes-AMG SL63</h3>
+                        <p class="model_price">starting at EGP 480,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=2022_mercedes_amg_sl63">View Details <span
+                                class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card" data-category="classic">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer src="assets/2022_byd_song_plus_ev.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="93.16deg 78.95deg 9.721m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+                            </model-viewer>
+                        </div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">BYD Song Plus EV</h3>
+                        <p class="model_price">starting at EGP 95,000</p>
+                        <ul class="model_features">
+                            <li>Electric</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=2022_byd_song_plus_ev">View Details <span
+                                class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card" data-category="sport">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer src="assets/2021_ferrari_sf90_spider.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="90deg 79.34deg 0.09523m"
+                                field-of-view="20deg" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+
+                            </model-viewer>
+                        </div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">Ferrari SF90 Spider</h3>
+                        <p class="model_price">starting at EGP 1,250,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary" href="product.html?model=2021_ferrari_sf90_spider">View Details
+                            <span class="arrow2"></span></a>
+                    </div>
+                </div>
+                <div class="model_card" data-category="sport">
+                    <div class="model_image">
+                        <div class="car_3d_placeholder"><model-viewer
+                                src="assets/2014_varis_kamikaze-r_circuit_ver_nissan_gt-r.glb" ar
+                                ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral"
+                                poster="poster.webp" shadow-intensity="1" camera-orbit="90deg 80deg 10m"
+                                field-of-view="20deg" exposure="1.5" environment-intensity="1.5" disable-zoom>
+                                <div class="progress-bar hide" slot="progress-bar">
+                                    <div class="update-bar"></div>
+                                </div>
+
+                            </model-viewer>
+                        </div>
+                    </div>
+                    <div class="model_info">
+                        <h3 class="model_title">Nissan GT-R Varis Kamikaze-R</h3>
+                        <p class="model_price">starting at EGP 780,000</p>
+                        <ul class="model_features">
+                            <li>Petrol</li>
+                            <li>Automatic</li>
+                        </ul>
+                        <a class="btn btn_secondary"
+                            href="product.html?model=2014_varis_kamikaze_r_circuit_ver_nissan_gt_r">View Details <span
+                                class="arrow2"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistics">
+        <div class="container">
+            <div class="stats_grid">
+                <div class="stat_item">
+                    <div class="stat_icon"><img src="assets/stat_icon1.svg" alt=""></div>
+                    <div class="stat_number">15+</div>
+                    <div class="stat_label">Years Experience</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_icon"><img src="assets/stat_icon2.svg" alt=""></div>
+                    <div class="stat_number">50K+</div>
+                    <div class="stat_label">Happy Customers</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_icon"><img src="assets/stat_icon3.svg" alt=""></div>
+                    <div class="stat_number">200+</div>
+                    <div class="stat_label">Models Available</div>
+                </div>
+                <div class="stat_item">
+                    <div class="stat_icon"><img src="assets/stat_icon4.svg" alt=""></div>
+                    <div class="stat_number">25+</div>
+                    <div class="stat_label">Showrooms</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sustainable_future">
+        <div class="container">
+            <div class="sustainable_content">
+                <div class="sustainable_image">
+                    <img src="assets/image4.png" alt="Electric car charging">
+                    <div class="stats_overlay">
+                        <div class="overlay_stat">
+                            <span class="overlay_icon"><img src="assets/overlay_icon1.svg" alt="">
+                                <div class="overlay_number">450km</div>
+                            </span>
+
+                            <div class="overlay_label">Range</div>
+                        </div>
+                        <div class="overlay_stat">
+                            <span class="overlay_icon"><img src="assets/overlay_icon2.svg" alt="">
+                                <div class="overlay_number">30min</div>
+                            </span>
+
+                            <div class="overlay_label">Fast Charge</div>
+                        </div>
+                        <div class="overlay_stat">
+                            <span class="overlay_icon"><img src="assets/overlay_icon3.svg" alt="">
+                                <div class="overlay_number">Zero</div>
+                            </span>
+
+                            <div class="overlay_label">Emissions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sustainable_text">
+                    <span class="subtitle">Sustainable Future</span>
+                    <h2 class="section_title">Driving Towards a Sustainable Future</h2>
+                    <p>We support clean mobility through a growing range of electric and hybrid vehicles that reduce
+                        emissions without compromising performance. Experience the future of driving with advanced
+                        battery technology, extended range, and rapid charging capabilities.</p>
+                    <ul class="sustainable_features">
+                        <li>
+                            <span class="feature_icon"><img src="assets/bullet.svg" alt=""></span>
+                            <div>
+                                <strong>Zero Emissions</strong>
+                                <p>Contribute to cleaner air and reduced carbon footprint</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature_icon"><img src="assets/bullet.svg" alt=""></span>
+                            <div>
+                                <strong>Lower Running Costs</strong>
+                                <p>Save on fuel and maintenance with electric powertrains</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="feature_icon"><img src="assets/bullet.svg" alt=""></span>
+                            <div>
+                                <strong>Advanced Technology</strong>
+                                <p>Experience cutting-edge features and intelligent systems</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn btn_primary">Explore Electric Cars <span class="arrow"></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_column footer_company">
+                    <div class="footer_logo">
+                        <img src="assets/logo.svg" alt="Auto Company Logo">
+                    </div>
+                    <p class="footer_description">Redefining the automotive experience through innovation, transparency,
+                        and customer excellence. Your journey to the perfect vehicle starts here.</p>
+                    <div class="footer_contact">
+                        <div class="contact_item">
+                            <span class="contact_icon"><img src="assets/phone.svg" alt=""></span>
+                            <span>+20 123 456 7890</span>
+                        </div>
+                        <div class="contact_item">
+                            <span class="contact_icon"><img src="assets/email.svg" alt=""></span>
+                            <span>info@autocompany.eg</span>
+                        </div>
+                        <div class="contact_item">
+                            <span class="contact_icon"><img src="assets/location.svg" alt=""></span>
+                            <span>123 Tahrir Street, Downtown Cairo, Egypt</span>
+                        </div>
+                    </div>
+                    <p class="copyright">© 2023 Auto Company. All rights reserved.</p>
+                </div>
+                <div class="footer_column">
+                    <h4 class="footer_heading">Company</h4>
+                    <ul class="footer_links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <h4 class="footer_heading">Services</h4>
+                    <ul class="footer_links">
+                        <li><a href="#browse">Browse Models</a></li>
+                        <li><a href="#3d">3D View</a></li>
+                        <li><a href="#compare">Compare Cars</a></li>
+                        <li><a href="#financing">Financing</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <h4 class="footer_heading">Support</h4>
+                    <ul class="footer_links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#service">Service Centers</a></li>
+                        <li><a href="#warranty">Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <h4 class="footer_heading">Follow Us</h4>
+                    <div class="social_icons">
+                        <a href="#" class="social_icon">f</a>
+                        <a href="#" class="social_icon">t</a>
+                        <a href="#" class="social_icon">in</a>
+                        <a href="#" class="social_icon">li</a>
+                    </div>
+                    <div class="legal_links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="code.js"></script>
+</body>
+
+</html>
