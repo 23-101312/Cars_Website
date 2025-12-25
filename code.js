@@ -1,3 +1,12 @@
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+    }, 500);
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const burgerMenu = document.getElementById('burgerMenu');
   const navWrapper = document.getElementById('navWrapper');
@@ -574,3 +583,251 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function initGSAPAnimations() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from('.hero_text', {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: 'power2.out',
+    delay: 0.2
+  });
+
+  gsap.from('.hero_car', {
+    opacity: 0,
+    y: 40,
+    duration: 0.8,
+    ease: 'power2.out',
+    delay: 0.4
+  });
+
+  gsap.utils.toArray('.section_header, .section_text, .models_header, .product_section_head').forEach(header => {
+    gsap.from(header, {
+      scrollTrigger: {
+        trigger: header,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.6,
+      ease: 'power2.out'
+    });
+  });
+
+  if (document.querySelector('.design_images')) {
+    gsap.from('.design_image', {
+      scrollTrigger: {
+        trigger: '.design_images',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 40,
+      stagger: 0.15,
+      duration: 0.6,
+      ease: 'power2.out'
+    });
+  }
+
+  if (document.querySelector('.innovation_content')) {
+    gsap.from('.innovation_text', {
+      scrollTrigger: {
+        trigger: '.innovation_content',
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      x: -30,
+      duration: 0.7,
+      ease: 'power2.out'
+    });
+
+    gsap.from('.innovation_display', {
+      scrollTrigger: {
+        trigger: '.innovation_content',
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      x: 30,
+      duration: 0.7,
+      ease: 'power2.out'
+    });
+  }
+
+  if (document.querySelector('.stats_grid')) {
+    gsap.from('.stat_item', {
+      scrollTrigger: {
+        trigger: '.stats_grid',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 30,
+      stagger: 0.1,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+  }
+
+  if (document.querySelector('.sustainable_content')) {
+    gsap.from('.sustainable_image', {
+      scrollTrigger: {
+        trigger: '.sustainable_content',
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      x: -40,
+      duration: 0.7,
+      ease: 'power2.out'
+    });
+
+    gsap.from('.sustainable_text', {
+      scrollTrigger: {
+        trigger: '.sustainable_content',
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      x: 40,
+      duration: 0.7,
+      ease: 'power2.out'
+    });
+  }
+
+  if (document.querySelector('.footer')) {
+    gsap.from('.footer', {
+      scrollTrigger: {
+        trigger: '.footer',
+        start: 'top 90%',
+        toggleActions: 'play none none none'
+      },
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+  }
+
+  if (document.body.classList.contains('product_page')) {
+    gsap.from('.product_hero_top', {
+      opacity: 0,
+      y: 30,
+      duration: 0.7,
+      ease: 'power2.out',
+      delay: 0.2
+    });
+
+    gsap.from('.product_hero_car', {
+      opacity: 0,
+      scale: 0.95,
+      duration: 0.8,
+      ease: 'power2.out',
+      delay: 0.4
+    });
+
+    gsap.from('.product_option_card', {
+      opacity: 0,
+      y: 20,
+      stagger: 0.1,
+      duration: 0.5,
+      ease: 'power2.out',
+      delay: 0.6
+    });
+
+    if (document.querySelector('.product_callouts')) {
+      gsap.from('.product_callout', {
+        scrollTrigger: {
+          trigger: '.product_design_stage',
+          start: 'top 70%',
+          toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        scale: 0.8,
+        stagger: 0.08,
+        duration: 0.5,
+        ease: 'back.out(1.2)'
+      });
+    }
+
+    if (document.querySelector('.product_pricing_grid')) {
+      gsap.from('.price_card', {
+        scrollTrigger: {
+          trigger: '.product_pricing_grid',
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        y: 40,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: 'power2.out'
+      });
+    }
+
+    if (document.querySelector('.product_feature_grid')) {
+      gsap.from('.product_feature_img', {
+        scrollTrigger: {
+          trigger: '.product_feature_grid',
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        x: -40,
+        duration: 0.7,
+        ease: 'power2.out'
+      });
+
+      gsap.from('.product_feature_text', {
+        scrollTrigger: {
+          trigger: '.product_feature_grid',
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        x: 40,
+        duration: 0.7,
+        ease: 'power2.out'
+      });
+    }
+
+    if (document.querySelector('.product_booking_grid')) {
+      gsap.from('.product_booking_text', {
+        scrollTrigger: {
+          trigger: '.product_booking_grid',
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        x: -30,
+        duration: 0.7,
+        ease: 'power2.out'
+      });
+
+      gsap.from('.product_booking_form_wrap', {
+        scrollTrigger: {
+          trigger: '.product_booking_grid',
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        x: 30,
+        duration: 0.7,
+        ease: 'power2.out'
+      });
+    }
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGSAPAnimations);
+} else {
+  initGSAPAnimations();
+}
+
